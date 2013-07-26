@@ -1,0 +1,51 @@
+{
+  "name": "grunt-continue",
+  "description": "A grunt plugin to force other tasks to continue after failures",
+  "version": "0.0.0",
+  "homepage": "https://github.com/pghalliday/grunt-continue",
+  "author": {
+    "name": "Peter Halliday",
+    "email": "pghalliday@gmail.com",
+    "url": "http://stuffpetedoes.blogspot.nl/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pghalliday/grunt-continue.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pghalliday/grunt-continue/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/pghalliday/grunt-continue/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "grunt.js",
+  "engines": {
+    "node": ">= 0.10.4"
+  },
+  "scripts": {
+    "test": "grunt",
+    "travis-cov": {
+      "threshold": 100
+    }
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt-cli": "~0.1.8",
+    "grunt": "~0.4.1",
+    "chai": "~1.7.0",
+    "grunt-blanket": "~0.0.8",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-mocha-test": "~0.6.2",
+    "travis-cov": "~0.2.4"
+  },
+  "keywords": [
+    "gruntplugin",
+    "force",
+    "continue"
+  ]
+}
