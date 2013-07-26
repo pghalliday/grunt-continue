@@ -9,8 +9,8 @@ Vagrant.configure("2") do |config|
   # enable berkshelf
   config.berkshelf.enabled = true
 
-  config.vm.define "grunt-mocha-test" do |node|
-    node.vm.hostname = "grunt-mocha-test"
+  config.vm.define "grunt-continue" do |node|
+    node.vm.hostname = "grunt-continue"
     node.vm.box = "ubuntu1204"
     node.vm.box_url = "https://opscode-vm.s3.amazonaws.com/vagrant/opscode_ubuntu-12.04_provisionerless.box"
 
