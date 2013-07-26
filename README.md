@@ -15,12 +15,12 @@ $ npm install grunt-continue
 
 ### Running tests
 
-Here is a simple example gruntfile to show how you might force grunt to continue after failing tests if you have seom cleanup that you need to perform after ward
+Here is a simple example gruntfile to show how you might force grunt to continue after failing tests if you have some cleanup that you need to perform afterward
 
 ```javascript
 module.exports = function(grunt) {
 
-  // Add the grunt-continue tasks.
+  // Add the grunt-continue tasks
   grunt.loadNpmTasks('grunt-continue');
 
   // Other tasks and configuration
