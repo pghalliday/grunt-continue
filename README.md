@@ -41,7 +41,11 @@ module.exports = function(grunt) {
 };
 ```
 
-It should be noted that `continueOff` does not turn off the `force` option if `--force` was specified at the command line
+`continueOff` does not turn off the continuing if `--force` was specified at the command line.
+
+If `continueOn` is called muliple times `continueOff` must be called that many times in order to stop continuing.
+
+If `continueOff` is called more times than `continueOn` it will fail.
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using: 
