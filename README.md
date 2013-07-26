@@ -5,6 +5,8 @@
 
 A grunt plugin to force other tasks to continue after failures
 
+Inspired by and extended from [this](http://stackoverflow.com/a/16972894/2622241) answer by [explunit](http://stackoverflow.com/users/151212/explunit) on StackOverflow
+
 ## Usage
 
 Install next to your project's Gruntfile.js with: 
