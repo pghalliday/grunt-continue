@@ -15,8 +15,6 @@ Install next to your project's Gruntfile.js with:
 $ npm install grunt-continue
 ```
 
-### Running tests
-
 Here is a simple example gruntfile to show how you might force grunt to continue after failing tests if you have some cleanup that you need to perform afterward
 
 ```javascript
