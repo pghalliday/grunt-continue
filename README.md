@@ -47,6 +47,40 @@ If `continueOn` is called muliple times `continueOff` must be called that many t
 
 If `continueOff` is called more times than `continueOn` it will fail.
 
+### Checking to see if there were any failures within the block
+
+It is sometimes useful to check if there were any warnings issued by any tasks within `continueOn` and `continueOff`. 
+For example, you may run a test within the block and cleanup at the end. In this instance you want the overall build to fail after the cleanup.
+
+To accommodate this add the following task at the end: 
+
+```javascript
+module.exports = function(grunt) {
+
+  // Add the grunt-continue tasks
+  grunt.loadNpmTasks('grunt-continue');
+
+  // Other tasks and configuration
+  ...
+
+  grunt.registerTask('default', [
+    'setup',
+    'continueOn',
+    // All tasks after this point will be run with the force
+    // option so that grunt will continue after failures
+    'test',
+    'continueOff',
+    // Tasks after this point will be run without the force
+    // option so that grunt exits if they fail
+    'cleanup',
+    'continueFailIfWarningsWereIssued'
+  ]);
+
+};
+  
+  grun
+```
+
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using: 
 

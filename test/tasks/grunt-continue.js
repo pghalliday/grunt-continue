@@ -46,6 +46,7 @@ var execScenario = function(scenario, force, callback) {
 };
 
 describe('grunt-continue', function() {
+
   it('should continue when continue is on and fail after continue is turned off', function(done) {
     execScenario('onOff', false, function(error, stdout, stderr) {
       expect(stdout).to.match(/first/);
@@ -91,6 +92,7 @@ describe('grunt-continue', function() {
       done();
     });
   });
+  
 
   it('should fail if continueOff is called more times than continueOn', function(done) {
     execScenario('tooManyOffs', false, function(error, stdout, stderr) {
@@ -103,4 +105,21 @@ describe('grunt-continue', function() {
       done();
     });
   });
+
+  it('should fail if we check if warnings were issued within a continue block', function(done){
+    execScenario('failIfWarningsWereIssued', false, function(error, stdout, stderr) {
+      expect(stdout).to.match(/second/);
+      expect(stdout).to.match(/Aborted due to warnings./);
+      done();
+    });
+  });
+
+  it('should pass if we check if warnings were issued within a continue block - and none were', function(done){
+    execScenario('passIfNoWarningsWereIssued', false, function(error, stdout, stderr) {
+      expect(stdout).to.match(/first/);
+      expect(stdout).to.not.match(/Aborted due to warnings./);
+      done();
+    });
+  });
+
 });
