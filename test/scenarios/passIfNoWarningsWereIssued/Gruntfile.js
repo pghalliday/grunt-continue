@@ -14,9 +14,9 @@ module.exports = function(grunt) {
 
   // Default task.
   grunt.registerTask('default', [
-    'continueOn',
+    'continue:on',
     'pass:first',
-    'continueOff',
-    'continueFailIfWarningsWereIssued'
+    'continue:off',
+    'continue:fail-on-warning'
   ]);
 };
