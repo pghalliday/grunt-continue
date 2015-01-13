@@ -15,15 +15,15 @@ module.exports = function(grunt) {
   // Default task.
   grunt.registerTask('default', [
     'pass:first',
-    'continueOn',
-    'continueOn',
-    'continueOn',
+    'continue:on',
+    'continue:on',
+    'continue:on',
     'fail:second',
-    'continueOff',
+    'continue:off',
     'fail:third',
-    'continueOff',
+    'continue:off',
     'fail:fourth',
-    'continueOff',
+    'continue:off',
     'fail:fifth',
     'pass:sixth'
   ]);

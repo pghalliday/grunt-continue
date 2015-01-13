@@ -80,7 +80,7 @@ describe('grunt-continue', function() {
     });
   });
 
-  it('should only stop continuing if continueOff has been called as many times as continueOn', function(done) {
+  it('should only stop continuing if continue:off has been called as many times as continue:on', function(done) {
     execScenario('nestedOnOff', false, function(error, stdout, stderr) {
       expect(stdout).to.match(/first/);
       expect(stdout).to.match(/second/);
@@ -94,7 +94,7 @@ describe('grunt-continue', function() {
   });
   
 
-  it('should fail if continueOff is called more times than continueOn', function(done) {
+  it('should fail if continue:off is called more times than continue:on', function(done) {
     execScenario('tooManyOffs', false, function(error, stdout, stderr) {
       expect(stdout).to.match(/first/);
       expect(stdout).to.match(/second/);
