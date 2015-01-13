@@ -1,7 +1,7 @@
 {
   "name": "grunt-continue",
   "description": "A grunt plugin to force other tasks to continue after failures",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "homepage": "https://github.com/pghalliday/grunt-continue",
   "author": {
     "name": "Peter Halliday",
