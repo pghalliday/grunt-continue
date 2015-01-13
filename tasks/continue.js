@@ -10,8 +10,7 @@ module.exports = function(grunt) {
   }
 
   grunt.registerTask('continue:on', 'Continue after failing tasks', function() {
-
-    grunt.fail.warn = warn;
+    grunt.warn = grunt.fail.warn = warn;
     overridden = grunt.config('grunt-continue:overridden') || false;
     if (!overridden) {
       count = grunt.config('grunt-continue:count') || 0;
@@ -27,7 +26,7 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('continue:off', 'Stop continuing after failing tasks', function() {
-    grunt.fail.warn = defaultWarnHandler;
+    grunt.warn = grunt.fail.warn = defaultWarnHandler;
     overridden = grunt.config('grunt-continue:overridden') || false;
     if (!overridden) {
       count = grunt.config('grunt-continue:count') || 0;
